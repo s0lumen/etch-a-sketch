@@ -1,4 +1,4 @@
-const sketchGrid = document.querySelector(".sketchContainer");
+const sketchContainer = document.querySelector(".sketchContainer");
 let slider = document.querySelector("#slider")
 
 
@@ -14,6 +14,15 @@ function sketchBox(size) {
 
     return box;
 }
+
+function sketchGrid(dimension) {
+    for (let i = 0; i < dimension; i++) {
+        sketchContainer.appendChild(sketchBox(sketchContainer.clientWidth / dimension));
+        
+    }
+}
+
+sketchGrid(16);
 
 //function sketchGrid(dimension) {
 //    for ()
