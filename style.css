@@ -8,11 +8,10 @@
     width: 500px;
     border: 2px solid black;
     display: flex;
-    flex-flow: row wrap;
-    position: relative;
-    justify-content: space-around;
+    flex-wrap: wrap;
 }
 
-.box {
-    border: .5px solid black;
+.tiles {
+    box-sizing: border-box;
+    border: .1px solid black;
 }
