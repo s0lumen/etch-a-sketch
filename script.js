@@ -1,11 +1,13 @@
 const GRID_DIM = 500;
 
 const sketchContainer = document.querySelector('.sketchContainer');
+const colorPicker = document.querySelector('#colorPicker')
 let slider = document.querySelector('#slider')
 
 
 slider.onmousemove = (e) => console.log(e.target.value);
-// slider.onchange = (e) => newValue(e.target.value);
+slider.onchange = (e) => console.log(e.target.value);
+colorPicker.oninput =  (e) => console.log(e.target.value);
 // slider.addEventListener("change", (e) => ) 
 
 
@@ -18,8 +20,13 @@ function createTile () {
         tiles.style.width = `${GRID_DIM / dimension}px`;
         tiles.style.height = `${GRID_DIM / dimension}px`;
 
+        
         sketchContainer.appendChild(tiles);
     }
 }  
+
+function paint (e) {
+
+}
 
 createTile();
