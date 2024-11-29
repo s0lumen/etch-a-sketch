@@ -12,12 +12,11 @@ let btnRandom = document.querySelector('#Random');
 
 slider.onmousemove = (e) => console.log(e.target.value);
 slider.onchange = (e) => console.log(e.target.value);
-colorPicker.oninput =  (e) => console.log(e.target.value);
+colorPicker.oninput =  (e) => sketchPaint(e.target.value);
 btnColor.onclick = () => sketchMode('color');
 btnRandom.onclick = () => sketchMode('rainbow')
 btnEraser.onclick = () => sketchMode('erase')
 // slider.addEventListener("change", (e) => ) 
-
 
 function createTile () {
     let dimension = slider.value;
@@ -52,7 +51,7 @@ function sketchMode (sketchColor) {
 }
 
 function paint(e) {
-
+    
 }
 
 createTile();
